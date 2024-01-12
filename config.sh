@@ -1,7 +1,7 @@
 sudo apt install -y zsh kitty neofetch picom ranger rofi i3status  i3blocks filezilla vlc ffmpeg feh lxappearance nitrogen lsd bat \
                     xclip maim pulseaudio-utils openssh-client samba fonts-font-awesome playerctl zsh-autosuggestions \ 
                     zsh-syntax-highlighting git cmus nodejs npm apche2 default-mysql-client default-mysql-server default-mysql-server-core \ 
-                    mysql-common ufw libhidapi-libusb0 python3-pip thunderbird
+                    mysql-common ufw libhidapi-libusb0 python3-pip thunderbird pavucontrol
 
 # Install oh_my_zsh, p10k and fonts
 wget  https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Hack.zip &&
@@ -47,3 +47,13 @@ PATH=$PATH:$HOME/.local/bin
 sudo sh -c 'echo "SUBSYSTEM==\"usb\", ATTRS{idVendor}==\"0fd9\", TAG+=\"uaccess\"" > /etc/udev/rules.d/70-streamdeck.rules'
 sudo udevadm trigger
 python3 -m pip install streamdeck-ui --user
+
+# Snap
+sudo apt install snapd
+sudo systemctl start snapd
+sudo systemctl enable snapd
+sudo systemctl start snapd.apparmor
+sudo systemctl enable snapd.apparmor
+
+sudo snap install zoom-client postman beekeeper-studio discord docker arduino
+sudo snap install kubectl --classic
