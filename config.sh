@@ -12,5 +12,12 @@ echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 
+# Install ZSH plugins (autosuggestions autocomplete syntax-highlighting fzf)
+cd ~/.oh-my-zsh/plugins
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions &&
+git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git &&
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 
 git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git
