@@ -1,7 +1,7 @@
 sudo apt install -y zsh kitty neofetch picom ranger rofi i3status  i3blocks filezilla vlc ffmpeg feh lxappearance nitrogen lsd bat \
                     xclip maim pulseaudio-utils openssh-client samba fonts-font-awesome playerctl zsh-autosuggestions \ 
                     zsh-syntax-highlighting git cmus nodejs npm apche2 default-mysql-client default-mysql-server default-mysql-server-core \ 
-                    mysql-common ufw libhidapi-libusb0 python3-pip
+                    mysql-common ufw libhidapi-libusb0 python3-pip thunderbird
 
 # Install oh_my_zsh, p10k and fonts
 wget  https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Hack.zip &&
@@ -40,7 +40,7 @@ sudo service mysql start
 
 # pip dependencies
 python3 -m pip install --upgrade pip
-pip install i3ipc bumblebee-status netifaces
+pip install i3ipc bumblebee-status netifaces youtube-dl
 
 # Streamdeck config
 PATH=$PATH:$HOME/.local/bin
