@@ -201,7 +201,7 @@ bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection c
 # finds out, if available)
 bar {
         position top
-        font pango: Hack Nerd Fonts 10, pango:FontAwesome 10
+        font pango: Hack Nerd Font 10, pango:FontAwesome 10
         status_command  ~/.local/bin/bumblebee-status \
                 -m disk:root memory battery uptime ping traffic sensors cmus cpu pasource pasink date time \
                 -p root.path=/ cpu2.maxfreq cpu2.cpuload cpu2.coresload cpu2.temp cpu2.fanspeed spacer.text \
