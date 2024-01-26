@@ -33,10 +33,15 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 # Make config directories
 mkdir -p ~/.config/i3 ~/.config/rofi ~/.config/picom
 
+# Make config directories
+mkdir -p ~/.config/i3 
+mkdir -p ~/.config/rofi 
+mkdir -p ~/.config/picom
+
 # replace zsrch, i3, picom files
 rm ~/.zshrc
 rm ~/.config/i3/config
-mv zshrc-template .zshrc
+mv zshrc-template ~/.zshrc
 mv i3-config ~/.config/i3/config
 mv picom-template ~/.config/picom/picom.conf
 
