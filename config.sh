@@ -57,3 +57,4 @@ sudo systemctl enable snapd.apparmor
 
 sudo snap install zoom-client postman beekeeper-studio discord docker arduino
 sudo snap install kubectl --classic
+sudo snap install code --classic
