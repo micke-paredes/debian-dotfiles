@@ -1,6 +1,6 @@
 sudo apt install -y zsh kitty neofetch picom ranger rofi i3status  i3blocks filezilla vlc ffmpeg feh lxappearance nitrogen lsd bat \
                     xclip maim pulseaudio-utils openssh-client samba fonts-font-awesome playerctl zsh-autosuggestions \ 
-                    zsh-syntax-highlighting git cmus nodejs npm apche2 default-mysql-client default-mysql-server default-mysql-server-core \ 
+                    zsh-syntax-highlighting git cmus nodejs npm apache2 default-mysql-client default-mysql-server default-mysql-server-core \ 
                     mysql-common ufw libhidapi-libusb0 python3-pip thunderbird pavucontrol
 
 # Install oh_my_zsh, p10k and fonts
