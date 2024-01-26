@@ -38,6 +38,7 @@ rm ~/.zshrc
 rm ~/.config/i3/config
 mv zshrc-template .zshrc
 mv i3-config ~/.config/i3/config
+mv picom-template ~/.config/picom/picom.conf
 
 # Alternating layout
 git clone https://github.com/olemartinorg/i3-alternating-layout
