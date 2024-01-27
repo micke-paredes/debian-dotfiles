@@ -8,6 +8,11 @@ mkdir -p ~/.local/share/rofi/themes
 git clone https://github.com/lr-tech/rofi-themes-collection.git &&
 mv rofi-themes-collection/themes/* ~/.local/share/rofi/themes/
 
+# Spotify
+curl -sS https://download.spotify.com/debian/pubkey_6224F9941A8AA6D1.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
+echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+sudo apt-get update && sudo apt-get install spotify-client
+
 # Install oh_my_zsh, p10k and fonts
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
