@@ -1,8 +1,8 @@
 sudo apt-get update
 sudo apt-get upgrade -y
 sudo apt-get install -y wget zsh kitty neofetch picom ranger rofi i3status  i3blocks filezilla vlc ffmpeg feh lxappearance nitrogen lsd bat xclip maim pulseaudio-utils openssh-client samba fonts-font-awesome playerctl zsh-autosuggestions zsh-syntax-highlighting git cmus nodejs npm apache2 default-mysql-client default-mysql-server default-mysql-server-core mysql-common ufw libhidapi-libusb0 python3-pip thunderbird pavucontrol
-sudo apt install autoconf gcc make pkg-config libpam0g-dev libcairo2-dev libfontconfig1-dev libxcb-composite0-dev libev-dev libx11-xcb-dev libxcb-xkb-dev libxcb-xinerama0-dev libxcb-randr0-dev libxcb-image0-dev libxcb-util0-dev libxcb-xrm-dev libxkbcommon-dev libxkbcommon-x11-dev libjpeg-dev
-
+sudo apt install autoconf gcc make pkg-config libpam0g-dev libcairo2-dev libfontconfig1-dev libxcb-composite0-dev libev-dev libx11-xcb-dev libxcb-xkb-dev libxcb-xinerama0-dev libxcb-randr0-dev libxcb-image0-dev libxcb-util0-dev libxcb-xrm-dev libxkbcommon-dev libxkbcommon-x11-dev libjpeg-dev imagemagick x11-xserver-utils xdg-utils
+ 
 # Rofi
 mkdir -p ~/.local/share/rofi/themes
 git clone https://github.com/lr-tech/rofi-themes-collection.git &&
