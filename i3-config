@@ -229,9 +229,10 @@ client.background           #FFFFFF
 for_window [class="^.*"] border pixel 5
 
 exec --no-startup-id nitrogen --restore
+exec_always ckb-next -b
 exec_always streamdeck --no-ui
 exec_always picom -f
-exec_always feh --bg-fill Pictures/Wallpaper.png
+exec_always feh --bg-fill Pictures/Wallpapers/ROG-wallpaper-Underground-Hideout_3840x2160.jpg
 gaps inner 7
 gaps outer 7
 smart_gaps on
