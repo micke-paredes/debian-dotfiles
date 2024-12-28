@@ -74,8 +74,11 @@ cd i3lock-color
 ./build.sh
 ./install-i3lock-color.sh
 
-# Config samba
-
+# Install AMD Driver Videocard
+wget https://repo.radeon.com/amdgpu-install/6.2.3/ubuntu/jammy/amdgpu-install_6.2.60203-1_all.deb
+chmod +x amdgpu-install_6.2.60203-1_all.deb
+sudo apt install ./amdgpu-install_6.2.60203-1_all.deb
+sudo amdgpu-install
 
 # Starting services
 sudo systemctl enable apache2
