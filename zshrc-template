@@ -1,3 +1,5 @@
+# Add deno completions to search path
+if [[ ":$FPATH:" != *":/home/mparedes/.zsh/completions:"* ]]; then export FPATH="/home/mparedes/.zsh/completions:$FPATH"; fi
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -77,12 +79,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-autocomplete zsh-syntax-highlighting sudo)
-
-# Init using tmux
-# if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-#   exec tmux
-# fi
+plugins=(sudo git zsh-autosuggestions docker docker-compose zsh-syntax-highlighting dnf yum zsh-autocomplete git-flow)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -114,12 +111,37 @@ source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-neofetch
-alias cat="bat"
-alias mp3-dl="youtube-dl --extract-audio --audio-format mp3"
-alias video-dl="youtube-dl -f 24"
+
+# Alias
+fastfetch
+alias start-cam="/bin/zsh /opt/canon/init-cam.sh"
+alias stop-cam="/bin/zsh /opt/canon/stop-cam.sh"
+alias cat="batcat"
 alias exit="history -c && exit"
-alias clear="clear && neofetch"
+alias clear="clear && fastfetch"
 alias ls="lsd"
+alias chssh-key="zsh ~/.ssh/scripts/chssh-key.sh"
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+export PATH="$HOME/.local/bin:$PATH"
+export OBS_API_PASSWORD="q5JDiPMU2ofwaIOG"
+export OBS_WEBSOCKET_URL="obsws://localhost:4455/q5JDiPMU2ofwaIOG"
+export NVM_DIR="$HOME/.nvm"
+[ -s "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh" ] && \. "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm"
+
+
+# pnpm
+export PNPM_HOME="/home/mparedes/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+export PATH=$PATH:/opt/sonar-scanner/bin
+. "/home/mparedes/.deno/env"
+# Initialize zsh completions (added by deno install script)
+autoload -Uz compinit
+export PATH=$PATH:/snap/bin:/home/linuxbrew/.linuxbrew/bin
+export XDG_DATA_DIRS=$XDG_DATA_DIRS:/var/lib/snapd/desktop
